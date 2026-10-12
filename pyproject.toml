@@ -1,0 +1,24 @@
+[project]
+name = "picture-book"
+version = "0.1.0"
+description = "AIGC 数字绘本《草船借箭》—— 图文排版构建工具（uv 管理）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "reportlab>=4.2",
+    "python-pptx>=1.0.2",
+    "Pillow>=10.4",
+]
+
+[project.scripts]
+picture-book = "picture_book.build:main"
+
+[dependency-groups]
+preview = ["pymupdf>=1.24"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/picture_book"]

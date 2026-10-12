@@ -1,0 +1,19 @@
+# 虚拟环境与缓存
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# 构建产物与缓存
+dist/
+assets/.cache/
+assets/.placeholders/
+
+# 真实 API 配置（只提交 .env.example）
+.env
+
+# 生成的插画体积大，不入库
+assets/images/*.png
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.webp
